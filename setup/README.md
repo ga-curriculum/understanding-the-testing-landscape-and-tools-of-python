@@ -1,5 +1,5 @@
 <h1>
-  <span class="headline">[tktk Headline]</span>
+  <span class="headline">Understanding the Testing Landscape and Tools of Python</span>
   <span class="subhead">Setup</span>
 </h1>
 
@@ -13,11 +13,11 @@ Open your Terminal application and navigate to your <code class="filepath">~/cod
 cd ~/code/ga/lectures
 ```
 
-Make a new directory called <code class="filepath">tktk-module-name</code>, then enter this directory:
+Make a new directory called <code class="filepath">understanding-the-testing-landscape-and-tools-of-python</code>, then enter this directory:
 
 ```bash
-mkdir tktk-module-name
-cd tktk-module-name
+mkdir understanding-the-testing-landscape-and-tools-of-python
+cd understanding-the-testing-landscape-and-tools-of-python
 ```
 
 Open the contents of the directory in VS Code:

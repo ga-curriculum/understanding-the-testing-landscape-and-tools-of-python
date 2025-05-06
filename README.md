@@ -1,21 +1,21 @@
 <h1>
   <span class="prefix"></span>
-  <span class="headline">[tktk Headline]</span>
+  <span class="headline">Understanding the Testing Landscape and Tools of Python</span>
 </h1>
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module.
+This module introduces learners to the foundational concepts of software testing, focusing on the different types of tests used throughout the development lifecycle: unit tests, integration tests, and end-to-end (E2E) tests. Students will explore the testing pyramid as a visual framework for understanding the role and value of each test type in building reliable, maintainable systems. The session also provides a high-level overview of commonly used testing tools in the Python ecosystem—such as `pytest`, `unittest`, and `Selenium`—and explains where they fit within the broader testing strategy. Through real-world examples and practical context, learners will develop a clear mental model of how testing supports software quality and how these tools will be used in the rest of the course.
 
 ## Content
 
-| Lesson | Est. Delivery Time | Skills |
-| ------ |:------------------:| ------ |
-| [Setup](./setup/README.md)                          | -- | Set up the development environment. |
-| [Concepts](./concepts/README.md)                    | -- | tktk Skills to cover                |
-| [tktk Microlesson Name](./microlesson-01/README.md) | -- | tktk Skills to cover                |
-| [tktk Microlesson Name](./microlesson-02/README.md) | -- | tktk Skills to cover                |
-| **Total content**                                   | -- |                                     |
+| Lesson                                                                                                                           | Est. Delivery Time | Skills                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------- | :----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [The Testing Landscape of Python](./the-testing-landscape-of-python/README.md)                                                   |       10 min       | Identify the role of testing in professional Python development and reflect on prior experience with writing, running, or encountering software tests. |
+| [Understanding Different Types of Software Tests](./understanding-different-types-of-software-tests/README.md)                   |       15 min       | Differentiate between unit, integration, and end-to-end tests by describing their purpose, scope, and typical use cases.                               |
+| [Python Testing Tools Overview](./python-testing-tools-overview/README.md)                                                       |       10 min       | Recognize and categorize common Python testing tools (e.g., `pytest`, `unittest`, `Selenium`) by identifying which test types they support.            |
+| [Applying Testing Strategies in Professional Environments](./applying-testing-strategies-in-professional-environments/README.md) |       10 min       | Analyze common testing scenarios in professional environments to determine when and how different test types and tools are applied effectively.        |
+| **Total content**                                                                                                                |       45 min       |                                                                                                                                                        |
 
 ## References
 
@@ -25,32 +25,15 @@ tktk Write a short but descriptive summary of the content in this module.
 
 ### Prerequisites
 
-- tktk
-- tktk
-- tktk
-
-### Starter code
-
-tktk If there is not a starter code repo that students will use to start this lesson, then this section and all of its content should be removed.
-
-🟢 [Starter code](https://git.generalassemb.ly/modular-curriculum-all-courses/tktk)
-
-### Solution code
-
-tktk If there is not solution code related to this module this section and all of its content should be removed.
-
-🏁 [Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/tktk)
-
-### Deployed site
-
-tktk If there is not a deployed site related to this module this section and all of its content should be removed.
-
-🌐 [Live site](https://generalassemb.ly/tktk)
+- Basic proficiency in Python syntax and data structures (lists, dictionaries, functions, classes)
+- Experience building and running FastAPI applications (endpoints, routing, HTTP methods)
+- General awareness of software development workflows (writing code, deploying, debugging)
+- Familiarity with developer tools such as the terminal, virtual environments, and Git
 
 ### Course landing pages
 
-- [tktk-course-acronym - tktk Course Full Name](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/tktk-module-name/canvas-landing-pages/tktk-course-acronym.html)
-- [Fallback](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/tktk-module-name/canvas-landing-pages/fallback.html)
+- [PTR - Python Testing and Reliability](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/understanding-the-testing-landscape-and-tools-of-python/canvas-landing-pages/ptr.html)
+- [Fallback](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/understanding-the-testing-landscape-and-tools-of-python/canvas-landing-pages/fallback.html)
 
 ### Resources
 

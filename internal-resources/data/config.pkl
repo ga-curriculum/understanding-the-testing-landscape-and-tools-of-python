@@ -12,9 +12,9 @@ import "microlessons.pkl" as mls
 
 repo {
   // This name is shown in the header nav to navigate users home
-  friendlyName = "[tktk Headline]"
+  friendlyName = "Understanding the Testing Landscape and Tools of Python"
   // This must match the repo name as it appears on GitHub exactly
-  name = "tktk-module-name"
+  name = "understanding-the-testing-landscape-and-tools-of-python"
   type = "Lesson"
 }
 
