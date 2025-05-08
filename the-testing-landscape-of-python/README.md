@@ -6,8 +6,6 @@
 **Learning Objective:**  
 Identify the role of testing in professional Python development and reflect on prior experience with writing, running, or encountering software tests.
 
----
-
 ## Why testing matters
 
 When developing software, it is not enough for code to work just once—and in just one scenario. Reliability means the application continues to behave correctly as requirements evolve, features are added, bugs are fixed, or the codebase changes over time.

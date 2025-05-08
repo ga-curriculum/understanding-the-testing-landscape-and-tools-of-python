@@ -62,7 +62,6 @@ def test_duplicate_project_copies_all_fields():
 
 > 🏆 Unit tests offer rapid feedback for the most detailed code logic—catching mistakes before they ripple out to other parts of the application.
 
-
 ### 2. Integration tests: Ensure the components work together
 
 Integration tests connect the dots between your app’s layers—here, for example, your API and the database.

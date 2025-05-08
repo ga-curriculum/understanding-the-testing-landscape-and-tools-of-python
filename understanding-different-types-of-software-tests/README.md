@@ -6,7 +6,6 @@
 **Learning Objective:**  
 Differentiate between unit, integration, and end-to-end tests by describing their purpose, scope, and typical use cases within the software development lifecycle.
 
-
 ## The testing pyramid
 
 Developing reliable software involves not just writing code, but _testing_ it in meaningful ways. One widely-used model for understanding software testing strategies is the _testing pyramid_.
@@ -155,7 +154,7 @@ Let’s practice distinguishing between the main types of tests using scenarios 
    - **Scenario C:**  
      You test your API’s ability to add a new user to a database and confirm that the user appears in the response when retrieving the list of all users. This test uses a real test database.
 
-2. **Classification** 
+2. **Classification**
    For each scenario:
 
    - What is the scope—just one function, several modules, or the entire system?
