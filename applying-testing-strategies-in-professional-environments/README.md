@@ -6,9 +6,7 @@
 **Learning objective:**  
 Analyze common testing scenarios in professional environments to determine when and how different test types and tools are applied effectively.
 
----
-
-## Setting the stage: Why test strategy matters in real projects
+## Why test strategy matters in real projects
 
 Software development rarely happens in isolation. In most professional settings, you work with others—often on systems used by people worldwide—where reliability and maintainability are crucial. Testing strategies help teams safeguard quality, prioritize effort, and support smooth collaboration.
 
@@ -16,13 +14,11 @@ Imagine you join a globally distributed team maintaining a collaborative product
 
 > 💡 Think of your testing strategy as a toolkit for preventing “surprise” errors that impact users or slow down your team’s progress.
 
-tktk asset: Visual showing a multi-person team surrounding a web application, with icons for bug reports, test types (unit, integration, E2E), and common testing tools linked to different app layers.
+## Deciding what to test
 
----
+Let’s walk through a scenario drawn from real workplace practice.
 
-## Deciding what to test: A practical case study
-
-Let’s walk through a scenario drawn from real workplace practice. Consider the following:
+Consider the following:
 
 **Scenario:**  
 Your team is building a web app for managing team projects. The latest requirement: add a **Duplicate Project** button, allowing users to clone an existing project—including its tasks and team members.
@@ -33,17 +29,13 @@ Your team is building a web app for managing team projects. The latest requireme
 - What are the likely failure points?
 - Which parts of the system are affected (data, API, user interface)?
 
-tktk asset: Diagram of the “Duplicate Project” feature, with arrows showing interactions between frontend, backend, and database.
+## Applying the testing pyramid in context
 
----
-
-### Applying the testing pyramid in context
-
-Recall the _testing pyramid_ model: it encourages writing many unit tests, fewer integration tests, and a select set of end-to-end (E2E) tests.
+Recall the _testing pyramid_: it encourages writing many unit tests, fewer integration tests, and a select set of end-to-end (E2E) tests.
 
 Let’s map this feature to the three main test types:
 
-#### 1. Unit tests: Focus on the core logic
+### 1. Unit tests: Focus on the core logic
 
 Write unit tests to check the code responsible for duplicating a project’s data.
 
@@ -70,9 +62,8 @@ def test_duplicate_project_copies_all_fields():
 
 > 🏆 Unit tests offer rapid feedback for the most detailed code logic—catching mistakes before they ripple out to other parts of the application.
 
----
 
-#### 2. Integration tests: Ensure the components work together
+### 2. Integration tests: Ensure the components work together
 
 Integration tests connect the dots between your app’s layers—here, for example, your API and the database.
 
@@ -97,9 +88,7 @@ def test_duplicate_project_endpoint_creates_clone(client, test_db):
     assert "sam" in new_project.members
 ```
 
----
-
-#### 3. End-to-end (E2E) tests: Validate the user journey
+### 3. End-to-end (E2E) tests: Validate the user journey
 
 E2E tests mimic how a real user completes the duplicate action via the interface.
 
@@ -111,24 +100,6 @@ While tools like Selenium are often used here, at this stage, focus on the _conc
 
 > 💡 E2E tests are the “user’s view” of your system—catching issues that happen when everything connects, such as missing buttons or data not rendering on the interface.
 
-tktk asset: Illustration of a user interacting with the web app, highlighting each testing layer as it is exercised during the duplication flow.
-
----
-
-## Real-world analogy: House inspections
-
-To make this strategy more tangible, imagine building a new house:
-
-- **Unit tests:** Inspecting each brick and beam before it is used.
-- **Integration tests:** Checking that rooms connect (doors fit between walls, plumbing connects to the kitchen sink).
-- **E2E tests:** Walking through the front door and living in the house for a day to see if everything works as intended.
-
-> 💡 You would not rely on only one type of inspection if you wanted a safe and livable home—the same is true for building reliable applications.
-
-tktk asset: Visual comparing a layered house inspection to layers of software testing.
-
----
-
 ## Balancing quality, confidence, and effort
 
 In practice, teams must balance three factors:
@@ -138,102 +109,33 @@ In practice, teams must balance three factors:
 - **Risk:** Where have problems happened in past projects? Which parts are likely to change?
 
 > ♻️ High-impact areas get more test coverage, while low-impact or rarely used features may get less. This balance evolves as your projects grow.
+> No team achieves “perfect” coverage. Instead, they adapt test strategies as the codebase—and team priorities—change.
 
-> 🧠 No team achieves “perfect” coverage. Instead, they adapt test strategies as the codebase—and team priorities—change.
+<div class="activity group-exercise">
+  <h2 class="title">Design a test strategy</h2>
+  <span class="minutes">10 min</span>
+</div>
 
----
-
-## Guided interactions: Test strategy decision points
-
-Let’s practice recognizing how these choices play out on real projects.
-
-### Interactive prompt 1
-
-You are refactoring the core business logic of an API, separating calculations into new helper functions. No endpoints or database schemas are changing.
-
-- Which type of test should be your primary focus, and why?
-- Which tools make the most sense for this work?
-- What risks could remain if you skip other test types?
-
-_Pause and jot down your answers. Be ready to discuss._
-
-tktk asset: Slide or worksheet for capturing responses to strategy prompts.
-
----
-
-### Interactive prompt 2
-
-Your team finishes a major user interface redesign—the structure and style of most user workflows is new, but the backend logic and API remain unchanged.
-
-- Which test type is now most important?
-- Which tests or layers can you likely keep as they are?
-- How do you update your test suite for this kind of feature?
-
-_Reflect briefly—share your thinking with a peer or small group._
-
-tktk asset: Comparison table listing possible risks and recommended approaches for logic-heavy vs. UI-heavy changes.
-
----
-
-## Embedding testing in CI/CD workflows
-
-Writing tests is only part of the picture. Modern teams depend on continuous integration and continuous delivery (_CI/CD_) systems to run tests every time new code is proposed.
-
-- Configure your CI tools (like GitHub Actions or GitLab CI) to run all tests on a new pull request or merge.
-- Prioritize speed: run unit and integration tests for every change; run E2E tests in a less frequent or separate process if they are slow.
-- Surface clear reports; failed tests should indicate exactly what is wrong for faster fixes.
-
-> 🏆 Well-maintained pipelines act as a safety net, ensuring only high-quality code reaches deployment.
-
-tktk asset: Diagram or animation of a CI/CD “conveyor belt,” with code changes moving through automated unit, integration, and E2E tests before being approved.
-
----
-
-### Common pitfalls to watch for
-
-- **Unreliable tests:** Flaky or slow tests frustrate teams and decrease trust in the test suite.
-- **Not enough isolation:** If tests share resources (databases, files) without careful setup, they may fail unpredictably.
-- **Over-reliance on one type:** Relying only on unit tests (or only on E2E tests) allows subtle issues to escape detection.
-
-> ⚠ Balancing test layers ensures bugs are caught early—without slowing your team down with unnecessary or redundant checks.
-
----
-
-## Activity: Design a test strategy for new scenarios
-
-**Purpose:**  
 Apply the decision-making process used by professional teams to select the best mix of tests and tools for realistic software changes.
 
-### Instructions
+### Activity
 
-1. **Review scenarios (3 minutes):**
-
-   - **Scenario A:** A developer rewrites the authentication logic for an API. Endpoints remain the same, but token handling changes behind the scenes.
-   - **Scenario B:** The team launches a new mobile-friendly dashboard, introducing many new UI components but reusing all backend APIs.
+1. **Scenario:** Your team launches a new mobile-friendly dashboard, introducing many new UI components but reusing all backend APIs.
 
 2. **Work in pairs or small groups:**
 
-   - For each scenario, answer:
+   - For this scenario, answer:
      - Which types of tests (unit, integration, E2E) are most appropriate, and why?
      - Which tools (pytest, unittest, Selenium) should be prioritized for each layer?
      - If you had to focus on one layer due to time constraints, which would you choose, and what risks would remain?
      - How will you ensure these tests run as part of your CI/CD process?
 
-3. **Document your test strategy and reasoning.**
+3. **Share**
 
-4. **Group share (3 minutes):**
-
-   - Present your test strategy for one scenario to the whole group.
+   - Be prepared to present your test strategy to the whole group.
    - Highlight any trade-offs, disagreements, or questions that emerged during discussion.
-
-> ❓ Discussion prompt: How does your approach to balancing coverage, confidence, and effort evolve as software grows in complexity? Share a real or hypothetical example where changing your testing strategy improved reliability or saved time for your team.
-
-tktk asset: Scenario handout with guiding questions and space for teams to record and present their strategies.
-
----
 
 ## Key takeaways for professional testing strategies
 
-- Use your mental model of the testing pyramid and the strengths of each Python tool to build effective test suites.
 - Focus your effort where it matters most, and adapt as projects grow or priorities shift.
 - Effective teams use a mix of test types and tools, embed testing into their daily workflow, and regularly adjust strategy based on feedback and observed risk.

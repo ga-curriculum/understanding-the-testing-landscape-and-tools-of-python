@@ -5,6 +5,6 @@
 
 ## Lesson references
 
-- [tktk descriptive name of link](https://generalassemb.ly/tktk)
-- [tktk descriptive name of link](https://generalassemb.ly/tktk)
-- [tktk descriptive name of link](https://generalassemb.ly/tktk)
+- [Pytest](https://docs.pytest.org/en/stable/)
+- [unittest](https://docs.python.org/3/library/unittest.html)
+- [Selenium](https://www.selenium.dev/documentation/)

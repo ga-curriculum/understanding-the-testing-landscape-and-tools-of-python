@@ -2,30 +2,30 @@ import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/univer
 
 // Add microlessons here, in the order they should be delivered
 
-setup = new Template.Microlesson {
-  friendlyName = "Setup"
-  dirName = "setup"
+theTestingLandscapeOfPython = new Template.Microlesson {
+  friendlyName = "The Testing Landscape of Python"
+  dirName = "the-testing-landscape-of-python"
   type = "Content"
   videoUrl = ""
 }
 
-concepts = new Template.Microlesson {
-  friendlyName = "Concepts"
-  dirName = "concepts"
+understandingDifferentTypesOfSoftwareTests = new Template.Microlesson {
+  friendlyName = "Understanding Different Types of Software Tests"
+  dirName = "understanding-different-types-of-software-tests"
   type = "Content"
   videoUrl = ""
 }
 
-microlesson01 = new Template.Microlesson {
-  friendlyName = "Microlesson 01"
-  dirName = "microlesson-01"
+pythonTestingToolsOverview = new Template.Microlesson {
+  friendlyName = "Python Testing Tools Overview"
+  dirName = "python-testing-tools-overview"
   type = "Content"
   videoUrl = ""
 }
 
-microlesson02 = new Template.Microlesson {
-  friendlyName = "Microlesson 02"
-  dirName = "microlesson-02"
+applyingTestingStrategiesInProfessionalEnvironments = new Template.Microlesson {
+  friendlyName = "Applying Testing Strategies in Professional Environments"
+  dirName = "applying-testing-strategies-in-professional-environments"
   type = "Content"
   videoUrl = ""
 }

@@ -6,11 +6,10 @@
 **Learning Objective:**  
 Differentiate between unit, integration, and end-to-end tests by describing their purpose, scope, and typical use cases within the software development lifecycle.
 
----
 
-## Making sense of the testing pyramid
+## The testing pyramid
 
-Developing reliable software involves not just writing code, but _testing_ it in meaningful ways. One widely-used mental model for understanding software testing strategies is the _testing pyramid_.
+Developing reliable software involves not just writing code, but _testing_ it in meaningful ways. One widely-used model for understanding software testing strategies is the _testing pyramid_.
 
 Imagine a triangle divided into three layers:
 
@@ -22,6 +21,8 @@ The widest part of the pyramid—the foundation—is composed of many unit tests
 
 > 💡 The pyramid helps you visualize a balanced approach: focusing on fast, low-cost tests (unit) at the bottom, and using smaller numbers of slower, more complex tests (integration, E2E) at the top.
 
+<img src="./assets/testing-pyramid.png" alt="Testing Pyramid Diagram with UNIT, INTEGRATION, and E2E layers" width="400">
+
 ### Why stack the pyramid this way?
 
 - **Cost and Speed:**  
@@ -31,13 +32,9 @@ The widest part of the pyramid—the foundation—is composed of many unit tests
 
 Building test suites according to this pyramid leads to faster feedback, fewer maintenance issues, and higher confidence in your code.
 
-tktk asset: Clear, labeled illustration of the testing pyramid, showing the layers (unit, integration, E2E) and their relative sizes.
+## Unit tests
 
----
-
-## Unit tests: Fast checks for small pieces
-
-**Key concept:** _Unit tests_ examine single pieces of your code—such as a function or a method—without involving other parts of your application.
+_Unit tests_ examine single pieces of your code—such as a function or a method—without involving other parts of your application.
 
 ### Where do unit tests fit in your workflow?
 
@@ -59,22 +56,15 @@ def test_calculate_discount():
 
 > 🏆 Unit tests provide immediate feedback—when this function changes in the future, you will quickly know if you accidentally broke its logic.
 
-**Real-world analogy:**  
-Unit tests are like verifying the operation of a single key on a keyboard before assembling the whole device. If the “A” key works, you know that one part of the whole system behaves correctly in isolation.
-
 **Typical use cases:**
 
-- Checking calculations or algorithms (e.g., totals, averages, discounts).
+- Checking calculations or algorithms (totals, averages, discounts).
 - Verifying data transformations.
 - Testing simple business logic decisions.
 
-tktk asset: Illustration of a person testing a single key from a keyboard, with other keys set aside.
+## Integration tests
 
----
-
-## Integration tests: Assembling the bigger picture
-
-**Key concept:** _Integration tests_ make sure that different parts of your application work together as intended.
+_Integration tests_ make sure that different parts of your application work together as intended.
 
 ### Where do integration tests fit in your workflow?
 
@@ -96,22 +86,15 @@ def test_user_registration(client, test_db):
 
 > 🧠 Integration tests are critical for systems where parts rely on each other. They often reveal problems that unit tests cannot catch, like mismatched data formats or overlooked setup steps.
 
-**Real-world analogy:**  
-Integration tests are like checking whether a light switch actually turns on a lamp after both have already been tested alone. The switch and lamp might work separately, but only an integration check confirms the wiring between them is correct.
-
 **Typical use cases:**
 
 - Ensuring APIs return correct data after querying a database.
 - Verifying that messaging services or email notifications are triggered appropriately.
 - Testing workflows that span several interconnected modules.
 
-tktk asset: Simple diagram showing a switch, wire, and lamp, highlighting the integration point.
+## End-to-end tests
 
----
-
-## End-to-end tests: Walking in the user’s shoes
-
-**Key concept:** _End-to-end (E2E) tests_ simulate a user’s complete journey through your application—often using tools that operate in the same way a human would interact with your product.
+_End-to-end (E2E) tests_ simulate a user’s complete journey through your application—often using tools that operate in the same way a human would interact with your product.
 
 ### Where do E2E tests fit in your workflow?
 
@@ -140,20 +123,13 @@ def test_checkout_process():
 
 > 💡 E2E tests show you if _everything_—from user interface to backend to data storage—works together as expected from a user’s perspective.
 
-**Real-world analogy:**  
-E2E testing is like having an independent inspector try out an entire transportation journey—checking a ticket, boarding a bus, transferring to a train, and reaching the final destination. A successful journey means every component along the way worked as it should.
-
 **Typical use cases:**
 
 - Confirming a user can complete registration, login, and checkout workflows.
 - Testing complex interactions and error scenarios (such as forgotten password flows).
 - Validating that real browsers or devices display the application correctly.
 
-tktk asset: Comic-style sequence of a traveler purchasing a ticket, making transfers, and reaching their destination—mirroring steps in an E2E test.
-
----
-
-## At a glance: Comparing the three types
+## Comparing the three types
 
 | Test type        | Purpose                             | Scope                     | Example use case           | Cost & speed    |
 | ---------------- | ----------------------------------- | ------------------------- | -------------------------- | --------------- |
@@ -163,62 +139,29 @@ tktk asset: Comic-style sequence of a traveler purchasing a ticket, making trans
 
 > ♻️ A healthy project balances all three types, using unit tests for most scenarios, integration tests for key connections, and E2E tests for critical workflows.
 
-tktk asset: Visual “scorecard” infographic showing strengths and tradeoffs of each test layer in terms of speed, coverage, and complexity.
-
----
-
-## Activity: Identify and classify software test scenarios
+<div class="activity solo-exercise">
+  <h2 class="title">Identify and classify software test scenarios</h2>
+  <span class="minutes">5 min</span>
+</div>
 
 Let’s practice distinguishing between the main types of tests using scenarios you might encounter as a Python developer.
 
-**Purpose:**  
-This activity helps you apply the testing pyramid concepts and recognize how each test fits real-world software work.
-
-### Instructions
-
-1. **Scenario analysis—5 minutes**  
-   For each scenario below, jot down what type of test it describes and why.
+1. **Read the Scenarios**
 
    - **Scenario A:**  
-     Test a function that accepts a list of numbers and returns their average. Make sure you check various input lists for correctness.
+     You are testing a function that accepts a list of numbers and returns their average. You verify the output using different sets of input values.
    - **Scenario B:**  
-     Simulate submitting a login form in a web browser and verify that the user lands on the dashboard page after logging in.
+     You simulate submitting a login form in a web browser and check that the user is redirected to the dashboard page after logging in.
    - **Scenario C:**  
-     Test your API’s ability to add a new user to a database, then confirm that the user appears in the results when you list all users. This test connects to an actual test database.
+     You test your API’s ability to add a new user to a database and confirm that the user appears in the response when retrieving the list of all users. This test uses a real test database.
 
-2. **Classification—3 minutes**  
-   For each scenario, answer:
+2. **Classification** 
+   For each scenario:
 
    - What is the scope—just one function, several modules, or the entire system?
    - Which technologies are involved—just Python code, or also a database, browser, or an API endpoint?
    - Based on your answers, classify each scenario as a unit, integration, or end-to-end test.
 
-3. **Solo reflection—2 minutes**  
-   Write briefly:
+3. **Reflection**
 
-   - Was any scenario more challenging to classify?
    - In your own coding experience (in Python or another language), which type of test do you write most often? Which do you feel least confident about?
-
-> ❓ Why might relying only on one type of test not be enough to ensure software quality? Can you describe a specific situation or project where this could cause problems?
-
-4. **Group discussion prompt**  
-   Which type of testing do you believe will be most beneficial for your projects, and why? Share or discuss an example from your experience or imagine a plausible scenario.
-
-tktk asset: Printable worksheet or slide template that lists the three scenarios and provides space for learners to classify and explain their answers.
-
----
-
-## Making testing relatable: Everyday systems and quality checks
-
-Software testing concepts can sometimes feel abstract. Let’s consider an analogy you encounter regularly: the journey of a package through a delivery system.
-
-- **Unit test:**  
-  Inspecting each box before it’s packed. Is it sturdy and properly sealed?
-- **Integration test:**  
-  Ensuring the conveyor belt actually moves the box from one station to the next.
-- **End-to-end test:**  
-  Following a package from sender to receiver, making sure it arrives intact and on time.
-
-> 💡 No single check guarantees success on its own; reliable delivery depends on sturdy boxes, working conveyor belts, and smooth handoff all the way to the final destination.
-
-tktk asset: Visual showing a package moving through inspection stations, conveyor belts, and final delivery.
