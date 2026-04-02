@@ -32,8 +32,8 @@ This module introduces learners to the foundational concepts of software testing
 
 ### Course landing pages
 
-- [PTR - Python Testing and Reliability](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/understanding-the-testing-landscape-and-tools-of-python/canvas-landing-pages/ptr.html)
-- [Fallback](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/understanding-the-testing-landscape-and-tools-of-python/canvas-landing-pages/fallback.html)
+- [PTR - Python Testing and Reliability](https://ga-curriculum.github.io/understanding-the-testing-landscape-and-tools-of-python/canvas-landing-pages/ptr.html)
+- [Fallback](https://ga-curriculum.github.io/understanding-the-testing-landscape-and-tools-of-python/canvas-landing-pages/fallback.html)
 
 ### Resources
 
@@ -45,4 +45,4 @@ This module introduces learners to the foundational concepts of software testing
 
 ---
 
-**Find a 👾 bug 👾 or have suggestions? [Let us know](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/module-feedback.html)!**
+**Find a 👾 bug 👾 or have suggestions? [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback.html)!**
